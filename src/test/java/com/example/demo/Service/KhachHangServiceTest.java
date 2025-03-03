@@ -15,7 +15,7 @@ class KhachHangServiceTest {
         khachHangService = new KhachHangService();
     }
     @Test
-    public void timKiemTrongTen(){
+    public void timKiemTenRong(){
         KhachHang khachHang = new KhachHang("KH1","NamKhanh",18,"khanh@gmail.com","0987654321");
         KhachHang khachHang1 = new KhachHang("KH2","",18,"khanh@gmail.com","0987654321");
         khachHangService.themKH(khachHang);
@@ -51,7 +51,7 @@ class KhachHangServiceTest {
         khachHangService.themKH(khachHang);
         khachHangService.themKH(khachHang1);
         Optional<KhachHang> kq = khachHangService.timKiemTheoTen("NamKhanh1");
-        assertTrue(kq.isPresent(),"khong tim thay ten khach hang");
+        assertFalse(kq.isEmpty(),"khong tim thay ten khach hang");
         assertEquals("NamKhanh1",kq.get().getTen());
     }
     @Test

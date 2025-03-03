@@ -17,7 +17,7 @@ public class WebTest {
         chromeDriver.manage().window().maximize();
     }
     @Test
-    public void dangKi(){
+    public void dangKi() throws InterruptedException{
         chromeDriver.get("https://www.zoho.com/");
         WebElement btnSignUp = chromeDriver.findElement(By.xpath("//a[normalize-space()='Sign Up']"));
         btnSignUp.click();
@@ -25,10 +25,13 @@ public class WebTest {
         WebElement email = chromeDriver.findElement(By.xpath("//input[@id='email']"));
         email.sendKeys("hoangnamkhanh08122005@gmail.com");
 
+
         WebElement pass = chromeDriver.findElement(By.xpath("//input[@id='password']"));
         pass.sendKeys("Khanh@2005");
 
-        WebElement checkBox = chromeDriver.findElement(By.xpath("//*[@id=\"signup-termservice\"]"));
+        Thread.sleep(3000);
+
+        WebElement checkBox = chromeDriver.findElement(By.xpath("(//span[@id='signup-termservice'])[1]"));
         checkBox.click();
 
         WebElement btn = chromeDriver.findElement(By.xpath("//input[@id='signupbtn']"));
@@ -40,16 +43,24 @@ public class WebTest {
         WebElement btnSignIn = chromeDriver.findElement(By.xpath("//a[@class='zgh-login'][normalize-space()='Sign In']"));
         btnSignIn.click();
 
+        Thread.sleep(3000);
+
         WebElement email = chromeDriver.findElement(By.xpath("//input[@id='login_id']"));
         email.sendKeys("hoangnamkhanh08122005@gmail.com");
+
+        WebElement btn = chromeDriver.findElement(By.xpath("//button[@id='nextbtn']"));
+        btn.click();
 
         Thread.sleep(3000);
 
         WebElement pass = chromeDriver.findElement(By.xpath("//input[@id='password']"));
         pass.sendKeys("Khanh@2005");
 
-        WebElement btn = chromeDriver.findElement(By.xpath("//button[@id='nextbtn']"));
-        btn.click();
+        Thread.sleep(2000);
+
+        WebElement btn2 = chromeDriver.findElement(By.xpath("//button[@id='nextbtn']"));
+        btn2.click();
+
     }
     @AfterEach
     public void tearDown() throws InterruptedException{
