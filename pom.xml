@@ -122,6 +122,60 @@
             </plugin>
         </plugins>
     </build>
+
+
+<!--    liệt kê số từ 1 đến 100 mà trừ số chia hết cho 5-->
+<!--    public class LietKeSo {-->
+<!--    public static List<Integer> lietKe() {-->
+<!--    List<Integer> danhSach = new ArrayList<>();-->
+<!--    for (int i = 1; i <= 100; i++) {-->
+<!--    if (i % 5 != 0) { // Bỏ qua số chia hết cho 5-->
+<!--    danhSach.add(i);-->
+<!--    }-->
+<!--    }-->
+<!--    return danhSach;-->
+<!--    }-->
+<!--    @Test-->
+<!--    public void testSoNhoNhat() {-->
+<!--    List<Integer> result = lietKeSo.lietKe();-->
+<!--    assertTrue(result.contains(1)); // Kiểm tra số nhỏ nhất có trong danh sách-->
+<!--    }-->
+
+<!--    public static void main(String[] args) {-->
+<!--    List<Integer> ketQua = lietKe();-->
+<!--    System.out.println("Các số từ 1 đến 100 không chia hết cho 5:");-->
+<!--    System.out.println(ketQua);-->
+<!--    }-->
+<!--    }-->
+
+
+
+
+
+<!--    tính tổng số chẵn từ 1 đến 50 và kh chia hết cho 8-->
+<!--    public class KhongChiaHetCho5  {-->
+<!--    public static int khongchiahetcho5(){-->
+<!--    int sum = 0;-->
+<!--    for (int i = 1; i <= 50; i++){-->
+<!--    if (i%2 ==0 && i % 8 != 0){-->
+<!--    sum+=i;-->
+<!--    }-->
+<!--    }-->
+<!--    return sum;-->
+<!--    }-->
+
+<!--    public static void main(String[] args) {-->
+<!--    int kq = khongchiahetcho5();-->
+<!--    System.out.println(kq);-->
+<!--    }-->
+<!--    }-->
+<!--    @Test-->
+<!--    public void testGiaTriDung() {-->
+<!--    int kq = tinhTongSoChan.tinhTong();-->
+<!--    assertEquals(588, kq); // Kết quả đúng là 588-->
+<!--    }-->
+
+
 <!--    xoa-->
 <!--    public boolean xoaSach(int nam){-->
 <!--    listSach.removeIf(s -> s.getNamXuatBan() == nam);-->
