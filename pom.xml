@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>demo</name>
+    <description>Demo project for Spring Boot</description>
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- MAVEN -->
+
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.27.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.11</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.11</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- testNG -->
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Webdrivermanager -->
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.9.2</version>
+        </dependency>
+
+        <!-- slf4j -->
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.32</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+<!--    xoa-->
+<!--    public boolean xoaSach(int nam){-->
+<!--    listSach.removeIf(s -> s.getNamXuatBan() == nam);-->
+<!--    return true;-->
+<!--    }-->
+<!--    @Test-->
+<!--    public void xoaNamBienDuoi(){-->
+<!--    boolean kq = sachSevice.xoaSach(1990);-->
+<!--    assertTrue(kq);-->
+<!--    assertEquals(1,sachSevice.getAllSach().size());-->
+<!--    }-->
+
+<!--    tim kiem-->
+<!--    Optional<Sach> timSachTheoNam(int nam){-->
+<!--    return listSach.stream().filter(s ->s.getNamXuatBan() == nam ).findFirst();-->
+<!--    }-->
+<!--    @Test-->
+<!--    public void timKiemNamBienDuoi(){-->
+<!--    Optional<Sach> kq = sachSevice.timSachTheoNam(1990);-->
+<!--    assertTrue(kq.isPresent(),"khong tim thay");-->
+<!--    assertEquals(1990,kq.get().getNamXuatBan());-->
+<!--    }-->
+
+<!--    getALl-->
+<!--    public List<Sach> getAllSach(){-->
+<!--    return new ArrayList<>(listSach);-->
+<!--    }-->
+
+<!--    sua-->
+<!--    @Test-->
+<!--    public void suaNamBienDuoi(){-->
+<!--    boolean kq = sachSevice.suaSach(sach1,"Sach3","Conan","NamKhanh",1990,15000);-->
+<!--    assertTrue(kq);-->
+<!--    assertEquals(2,sachSevice.getAllSach().size());-->
+<!--    }-->
+
+<!--    @BeforeEach-->
+<!--    public void setUp(){-->
+<!--    WebDriverManager.chromedriver().setup();-->
+<!--    chromeDriver = new ChromeDriver();-->
+<!--    chromeDriver.manage().window().maximize();-->
+
+<!--    }-->
+<!--    @AfterEach-->
+<!--    public void tearDown() throws InterruptedException{-->
+<!--    if (chromeDriver != null){-->
+<!--    Thread.sleep(6000);-->
+<!--    chromeDriver.quit();-->
+<!--    }-->
+<!--    }-->
+
+</project>
